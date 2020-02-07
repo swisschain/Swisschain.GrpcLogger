@@ -13,9 +13,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-        source-url: https://nuget.pkg.github.com/orgs/SC-Poc/index.json
+        source-url: https://nuget.pkg.github.com/SC-Poc/index.json
       env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        NUGET_AUTH_TOKEN: ${{secrets.NUGET_TOCKEN}}
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: Test with dotnet
