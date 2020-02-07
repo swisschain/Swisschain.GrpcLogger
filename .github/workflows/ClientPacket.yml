@@ -1,7 +1,8 @@
 name: Deploy client packet
 
-on: 
-  release
+on:
+  push:
+    tags: "contract *"
 
 jobs:
   build:
@@ -16,9 +17,5 @@ jobs:
         dotnet-version: 3.1.100
     - name: Build with dotnet
       run: dotnet build --configuration Release
-    - name: Test with dotnet
-      run: dotnet test --configuration Release
     - name: Create the package
-      run: dotnet pack --configuration Release src/Swisschain.GrpcLogger /p:Version=${GITHUB_REF#refs/tags/}
-    - name: Publish the package to GPR
-      run: dotnet nuget push src/Swisschain.GrpcLogger/bin/Release/*.nupkg -s "https://api.nuget.org/v3/index.json" -k ${{ secrets.NUGET_TOCKEN }}
+      run: echo ${GITHUB_REF#refs/tags/}
