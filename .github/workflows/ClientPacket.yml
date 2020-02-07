@@ -2,7 +2,7 @@ name: Deploy client packet
 
 on:
   push:
-    tags: "contract *"
+    tags: "contract-*"
 
 jobs:
   build:
