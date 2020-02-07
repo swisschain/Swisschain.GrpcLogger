@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetCoreDecorators" Version="1.0.15" />
+    <PackageReference Include="Autofac" Version="5.0.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.26.0" />
+    <PackageReference Include="protobuf-net.Grpc" Version="1.0.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Swisschain.GrpcLogger.GrpcContracts\Swisschain.GrpcLogger.GrpcContracts.csproj" />
+  </ItemGroup>
+
+
+</Project>
