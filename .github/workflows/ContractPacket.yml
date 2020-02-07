@@ -23,4 +23,4 @@ jobs:
     - name: Create the package
       run: dotnet pack --configuration Release src/Swisschain.GrpcLogger.GrpcContracts
     - name: Publish the package to GPR
-      run: dotnet nuget push src/Swisschain.GrpcLogger.GrpcContracts/bin/Release/*.nupkg
+      run: dotnet nuget push src/Swisschain.GrpcLogger.GrpcContracts/bin/Release/*.nupkg --source "https://nuget.pkg.github.com/SC-Poc/Swisschain.GrpcLogger/index.json"
