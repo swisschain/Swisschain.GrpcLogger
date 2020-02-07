@@ -13,13 +13,11 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-      env:
-        NUGET_AUTH_TOKEN: ${{secrets.NUGET_TOCKEN}}
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: Test with dotnet
       run: dotnet test --configuration Release
     - name: Create the package
-      run: dotnet pack --configuration Release src/Swisschain.GrpcLogger.GrpcContracts
+      run: dotnet pack --configuration Release src/Swisschain.GrpcLogger.GrpcContracts /p:Version=1.0.1
     - name: Publish the package to GPR
-      run: dotnet nuget push src/Swisschain.GrpcLogger.GrpcContracts/bin/Release/*.nupkg -s "https://nuget.pkg.github.com/SC-Poc/Swisschain.GrpcLogger/index.json" -k ${{ secrets.NUGET_TOCKEN }}
+      run: dotnet nuget push src/Swisschain.GrpcLogger.GrpcContracts/bin/Release/*.nupkg -s "https://api.nuget.org/v3/index.json" -k ${{ secrets.NUGET_TOCKEN }}
