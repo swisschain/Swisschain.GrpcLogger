@@ -1,0 +1,5 @@
+{
+  "GrpcLogging": {
+    "Host": "${GrpcLoggingHost}"
+  }
+}

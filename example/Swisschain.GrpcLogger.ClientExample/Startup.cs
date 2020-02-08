@@ -21,20 +21,17 @@ namespace Swisschain.GrpcLogger.ClientExample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            GrpcClientFactory.AllowUnencryptedHttp2 = true;
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
 
             services.AddControllers();
-
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.RegisterGrpcLogger("http://localhost:5000");
+            builder.RegisterGrpcLogger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

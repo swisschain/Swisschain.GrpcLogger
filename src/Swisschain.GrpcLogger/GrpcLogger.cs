@@ -44,7 +44,7 @@ namespace Swisschain.GrpcLogger
             });
         }
         
-        public void WriteError(string process, Exception exception)
+        public void Error(string process, Exception exception)
         {
             _publisher.EnqueueEvent(new LogEventModel
             {
@@ -58,7 +58,7 @@ namespace Swisschain.GrpcLogger
             });
         }
 
-        public void WriteError(string process, string message, Exception exception = null)
+        public void Error(string process, string message, Exception exception = null)
         {
             _publisher.EnqueueEvent(new LogEventModel
             {

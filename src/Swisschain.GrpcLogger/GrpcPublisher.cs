@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Threading;
 using DotNetCoreDecorators;
 using Swisschain.GrpcLogger.GrpcContracts;
 using Swisschain.GrpcLogger.GrpcContracts.Models;

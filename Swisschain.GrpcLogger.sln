@@ -5,15 +5,20 @@ VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swisschain.GrpcLogger.GrpcContracts", "src\Swisschain.GrpcLogger.GrpcContracts\Swisschain.GrpcLogger.GrpcContracts.csproj", "{7E1A71E7-64E5-46AF-9FE1-27D5C6234A37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swisschain.GrpcLogger", "src\Swisschain.GrpcLogger\Swisschain.GrpcLogger.csproj", "{C2AB819F-290C-40F9-92E3-DC7EA0FE0CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swisschain.GrpcLogger", "src\Swisschain.GrpcLogger\Swisschain.GrpcLogger.csproj", "{C2AB819F-290C-40F9-92E3-DC7EA0FE0CFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swisschain.GrpcLogger.ServerExample", "example\Swisschain.GrpcLogger.ServerExample\Swisschain.GrpcLogger.ServerExample.csproj", "{6D7D49C9-B5BC-4683-873F-23F2D89E8B6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swisschain.GrpcLogger.ServerExample", "example\Swisschain.GrpcLogger.ServerExample\Swisschain.GrpcLogger.ServerExample.csproj", "{6D7D49C9-B5BC-4683-873F-23F2D89E8B6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swisschain.GrpcLogger.ClientExample", "example\Swisschain.GrpcLogger.ClientExample\Swisschain.GrpcLogger.ClientExample.csproj", "{E32F371D-A658-4893-AD98-7D1DB04C9F03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swisschain.GrpcLogger.ClientExample", "example\Swisschain.GrpcLogger.ClientExample\Swisschain.GrpcLogger.ClientExample.csproj", "{E32F371D-A658-4893-AD98-7D1DB04C9F03}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.  Library", "01.  Library", "{80E8EC38-7E51-41FD-9E2F-3835342C71CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. Tests", "10. Tests", "{CB72EEC8-8D5F-4104-812D-166754395D29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config example", "config example", "{2182401C-1066-41B9-BBF3-1A4B5FA49748}"
+	ProjectSection(SolutionItems) = preProject
+		example-appsettings.external.json = example-appsettings.external.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +51,7 @@ Global
 		{C2AB819F-290C-40F9-92E3-DC7EA0FE0CFC} = {80E8EC38-7E51-41FD-9E2F-3835342C71CA}
 		{6D7D49C9-B5BC-4683-873F-23F2D89E8B6E} = {CB72EEC8-8D5F-4104-812D-166754395D29}
 		{E32F371D-A658-4893-AD98-7D1DB04C9F03} = {CB72EEC8-8D5F-4104-812D-166754395D29}
+		{2182401C-1066-41B9-BBF3-1A4B5FA49748} = {CB72EEC8-8D5F-4104-812D-166754395D29}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {400A9C69-9B09-4053-B967-22E7616BD765}
