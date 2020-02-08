@@ -1,5 +1,4 @@
-name: Deploy contract packet
-
+name: Validate commit
 on: [push,pull_request]
 
 jobs:
