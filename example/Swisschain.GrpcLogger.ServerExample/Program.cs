@@ -18,8 +18,9 @@ namespace Swisschain.GrpcLogger.ServerExample
                 {
                     webBuilder.ConfigureKestrel(options =>
                     {
-                        // Setup a HTTP/2 endpoint without TLS.
-                        options.Listen(IPAddress.Any, 5000, o => o.Protocols = HttpProtocols.Http2);
+                         // Setup a HTTP / 2 endpoint without TLS.
+                         options.Listen(IPAddress.Any, 5000, o => o.Protocols = HttpProtocols.Http2);
+                         options.Listen(IPAddress.Any, 5001, o => o.Protocols = HttpProtocols.Http1);
                     });
 
                     webBuilder.UseStartup<Startup>();
