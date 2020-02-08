@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. Tests", "10. Tests", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config example", "config example", "{2182401C-1066-41B9-BBF3-1A4B5FA49748}"
 	ProjectSection(SolutionItems) = preProject
-		example-appsettings.external.json = example-appsettings.external.json
+		example-client-appsettings.external.json = example-client-appsettings.external.json
 	EndProjectSection
 EndProject
 Global
