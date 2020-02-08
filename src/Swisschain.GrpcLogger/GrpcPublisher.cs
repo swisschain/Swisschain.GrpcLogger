@@ -96,7 +96,7 @@ namespace Swisschain.GrpcLogger
                     Console.Write(log.LogLevel);
                     Console.ForegroundColor = ConsoleColor.White;
 
-                    Console.WriteLine($"\t{log.DateTime:HH:mm:ss.mmm} {log.Component}; {log.Process}");
+                    Console.WriteLine($"\t{log.DateTime: HH:mm:ss:fff} {log.Component}; {log.Process}");
                     Console.WriteLine($"\t{log.Message}");
                     if (!string.IsNullOrEmpty(log.StackTrace))
                     {
