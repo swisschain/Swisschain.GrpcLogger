@@ -22,4 +22,4 @@ jobs:
     - name: Publish the package to GPR
       run: dotnet nuget push src/Swisschain.GrpcLogger/bin/Release/*.nupkg -s "https://api.nuget.org/v3/index.json" -k ${{ secrets.NUGET_TOCKEN }}
     - name: push gh
-      run: dotnet nuget push src/Swisschain.GrpcLogger/bin/Release/*.nupkg --source "github"
+      run: dotnet nuget push src/Swisschain.GrpcLogger/bin/Release/*.nupkg -s https://nuget.pkg.github.com/swisschain/index.json -k ${GH_TOKEN}
