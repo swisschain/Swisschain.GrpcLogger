@@ -24,5 +24,7 @@ jobs:
       run: dotnet pack --configuration Release src/Swisschain.GrpcLogger /p:Version=${GITHUB_REF#refs/tags/contract-}
     - name: Publish the package to GPR
       run: dotnet nuget push src/Swisschain.GrpcLogger/bin/Release/*.nupkg -s "https://api.nuget.org/v3/index.json" -k ${{ secrets.NUGET_TOCKEN }}
+    - name: setup gh
+      run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/swisschain/index.json -Username NovichikhinAlexey -Password ${{ secrets.GITHUB_TOKEN }}        
     - name: push gh
-      run: dotnet nuget push src/Swisschain.GrpcLogger/bin/Release/*.nupkg
+      run: dotnet nuget push src/Swisschain.GrpcLogger/bin/Release/*.nupkg -s "GPR"
